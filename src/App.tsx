@@ -2,11 +2,12 @@ import { Admin, Resource, ShowGuesser } from "react-admin";
 import { dataProvider } from "./dataProvider";
 import { PostList, PostEdit, PostCreate } from "./posts";
 import { UserList } from "./users";
+import { Dashboard } from "./Dashboard";
 import PostIcon from "@mui/icons-material/Book";
 import UserIcon from "@mui/icons-material/Group";
 
 export const App = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin dataProvider={dataProvider} dashboard={Dashboard}>
     <Resource
       name="posts"
       list={PostList}
